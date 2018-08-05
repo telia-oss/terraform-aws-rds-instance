@@ -9,6 +9,7 @@ resource "aws_db_instance" "main" {
   password               = "${var.password}"
   port                   = "${var.port}"
   engine                 = "${var.engine}"
+  engine_version         = "${var.engine_version}"
   instance_class         = "${var.instance_type}"
   storage_type           = "gp2"
   allocated_storage      = "${var.allocated_storage}"

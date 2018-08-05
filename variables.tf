@@ -37,6 +37,11 @@ variable "engine" {
   default     = "postgres"
 }
 
+variable "engine_version" {
+  description = "The engine version to use."
+  default     = "9.6.6"
+}
+
 variable "instance_type" {
   description = "The DB instance class to use."
   default     = "db.m3.medium"
