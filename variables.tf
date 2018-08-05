@@ -39,7 +39,7 @@ variable "engine" {
 
 variable "engine_version" {
   description = "The engine version to use."
-  default     = "9.6.6"
+  default     = ""
 }
 
 variable "instance_type" {
