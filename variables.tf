@@ -57,9 +57,34 @@ variable "publicly_accessible" {
   default     = "false"
 }
 
+variable "monitoring_interval" {
+  description = "The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60."
+  default     = 0
+}
+
 variable "snapshot_identifier" {
   description = "Specifies whether or not to create this instance from a snapshot."
   default     = ""
+}
+
+variable "license_model" {
+  description = "License model information for this DB instance. Optional, but required for some DB engines, i.e. Oracle SE1"
+  default     = ""
+}
+
+variable "maintenance_window" {
+  description = "The window to perform maintenance in. Syntax: 'ddd:hh24:mi-ddd:hh24:mi'. Eg: 'Mon:00:00-Mon:03:00'"
+  default     = "Mon:00:00-Mon:03:00"
+}
+
+variable "backup_window" {
+  description = "The daily time range (in UTC) during which automated backups are created if they are enabled. Example: '09:46-10:16'. Must not overlap with maintenance_window"
+  default     = "02:00-04:00"
+}
+
+variable "backup_retention_period" {
+  description = "The days to retain backups for"
+  default     = 1
 }
 
 variable "skip_final_snapshot" {

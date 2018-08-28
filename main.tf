@@ -24,6 +24,11 @@ resource "aws_db_instance" "main" {
   publicly_accessible       = "${var.publicly_accessible}"
   vpc_security_group_ids    = ["${aws_security_group.main.id}"]
   multi_az                  = "${var.multi_az}"
+  backup_retention_period   = "${var.backup_retention_period}"
+  backup_window             = "${var.backup_window}"
+  maintenance_window        = "${var.maintenance_window}"
+  monitoring_interval       = "${var.monitoring_interval}"
+  license_model             = "${var.license_model}"
 
   # NOTE: This is duplicated because subnet_group does not return the name.
   db_subnet_group_name = "${var.name_prefix}-subnet-group"
