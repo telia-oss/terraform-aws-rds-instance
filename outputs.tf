@@ -31,12 +31,52 @@ output "security_group_id" {
   value       = "${aws_security_group.main.id}"
 }
 
+output "subnet_group_arn" {
+  description = "The ARN of the db subnet group."
+  value       = "${aws_db_subnet_group.main.arn}"
+}
+
 output "subnet_group_id" {
   description = "The db subnet group name."
   value       = "${aws_db_subnet_group.main.id}"
 }
 
-output "subnet_group_arn" {
-  description = "The ARN of the db subnet group."
-  value       = "${aws_db_subnet_group.main.arn}"
+output "address" {
+  description = "The address of the RDS instance"
+  value       = "${aws_db_instance.main.address}"
+}
+
+output "arn" {
+  description = "The ARN of the RDS instance"
+  value       = "${aws_db_instance.main.arn}"
+}
+
+output "availability_zone" {
+  description = "The availability zone of the RDS instance"
+  value       = "${aws_db_instance.main.availability_zone}"
+}
+
+output "zone_id" {
+  description = "The canonical hosted zone ID of the DB instance (to be used in a Route 53 Alias record)"
+  value       = "${aws_db_instance.main.hosted_zone_id}"
+}
+
+output "resource_id" {
+  description = "The RDS Resource ID of this instance"
+  value       = "${aws_db_instance.main.resource_id}"
+}
+
+output "status" {
+  description = "The RDS instance status"
+  value       = "${aws_db_instance.main.status}"
+}
+
+output "username" {
+  description = "The master username for the database"
+  value       = "${aws_db_instance.main.username}"
+}
+
+output "password" {
+  description = "The database password (this password may be old, because Terraform doesn't track it after initial creation)"
+  value       = "${aws_db_instance.main.password}"
 }

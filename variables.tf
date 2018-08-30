@@ -102,3 +102,18 @@ variable "tags" {
   type        = "map"
   default     = {}
 }
+
+variable "option_group_name" {
+  description = "Name of the DB option group to associate."
+  default     = ""
+}
+
+variable "parameter_group_name" {
+  description = "Name of the DB parameter group to associate"
+  default     = ""
+}
+
+variable "monitoring_role_arn" {
+  description = "The ARN for the IAM role that permits RDS to send Enhanced Monitoring metrics to CloudWatch Logs"
+  default     = ""
+}
