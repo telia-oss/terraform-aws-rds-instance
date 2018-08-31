@@ -66,11 +66,6 @@ output "resource_id" {
   value       = "${aws_db_instance.main.resource_id}"
 }
 
-output "status" {
-  description = "The RDS instance status"
-  value       = "${aws_db_instance.main.status}"
-}
-
 output "username" {
   description = "The master username for the database"
   value       = "${aws_db_instance.main.username}"
