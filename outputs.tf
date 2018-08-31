@@ -76,7 +76,3 @@ output "username" {
   value       = "${aws_db_instance.main.username}"
 }
 
-output "password" {
-  description = "The database password (this password may be old, because Terraform doesn't track it after initial creation)"
-  value       = "${aws_db_instance.main.password}"
-}
