@@ -75,4 +75,3 @@ output "username" {
   description = "The master username for the database"
   value       = "${aws_db_instance.main.username}"
 }
-
