@@ -28,6 +28,7 @@ resource "aws_db_instance" "main" {
   backup_window             = "${var.backup_window}"
   maintenance_window        = "${var.maintenance_window}"
   monitoring_interval       = "${var.monitoring_interval}"
+  monitoring_role_arn       = "${var.monitoring_role_arn}"
   license_model             = "${var.license_model}"
 
   # NOTE: This is duplicated because subnet_group does not return the name.
