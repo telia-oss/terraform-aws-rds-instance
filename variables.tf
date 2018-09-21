@@ -120,7 +120,7 @@ variable "monitoring_role_arn" {
 
 variable "storage_encrypted" {
   description = "Specifies whether the DB instance is encrypted."
-  default     = true
+  default     = "true"
 }
 
 variable "kms_key_id" {
