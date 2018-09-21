@@ -30,7 +30,8 @@ resource "aws_db_instance" "main" {
   monitoring_interval       = "${var.monitoring_interval}"
   monitoring_role_arn       = "${var.monitoring_role_arn}"
   license_model             = "${var.license_model}"
-
+  storage_encrypted         = "${var.storage_encrypted}"
+  kms_key_id                = "${var.kms_key_id}"
   # NOTE: This is duplicated because subnet_group does not return the name.
   db_subnet_group_name = "${var.name_prefix}-subnet-group"
 

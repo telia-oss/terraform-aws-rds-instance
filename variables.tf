@@ -117,3 +117,13 @@ variable "monitoring_role_arn" {
   description = "The ARN for the IAM role that permits RDS to send Enhanced Monitoring metrics to CloudWatch Logs"
   default     = ""
 }
+
+variable "storage_encrypted" {
+  description = "Specifies whether the DB instance is encrypted."
+  default     = true
+}
+
+variable "kms_key_id" {
+  description = "Specifies whether the DB instance is encrypted."
+  default     = "The ARN for the KMS encryption key. If creating an encrypted replica, set this to the destination KMS ARN."
+}
