@@ -124,6 +124,6 @@ variable "storage_encrypted" {
 }
 
 variable "kms_key_id" {
-  description = "Specifies whether the DB instance is encrypted."
-  default     = "The ARN for the KMS encryption key. If creating an encrypted replica, set this to the destination KMS ARN."
+  description = "The ARN for the KMS encryption key. If creating an encrypted replica, set this to the destination KMS ARN."
+  default     = ""
 }
