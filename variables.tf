@@ -74,7 +74,7 @@ variable "license_model" {
 
 variable "maintenance_window" {
   description = "The window to perform maintenance in. Syntax: 'ddd:hh24:mi-ddd:hh24:mi'. Eg: 'Mon:00:00-Mon:03:00'"
-  default     = "Mon:00:00-Mon:03:00"
+  default     = "Sun:05:00-Sun:06:00"
 }
 
 variable "backup_window" {
