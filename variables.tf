@@ -1,6 +1,13 @@
 # ------------------------------------------------------------------------------
 # Variables
 # ------------------------------------------------------------------------------
+
+variable "apply_immediately" {
+  type        = "string"
+  description = "Specifies whether any database modifications are applied immediately, or during the next maintenance window"
+  default     = "false"
+}
+
 variable "name_prefix" {
   description = "A prefix used for naming resources."
 }
