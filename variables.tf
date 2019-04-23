@@ -34,6 +34,11 @@ variable "database_name" {
   default     = "main"
 }
 
+variable "deletion_protection" {
+  description = "If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to true."
+  default     = false
+}
+
 variable "port" {
   description = "The port on which the DB accepts connections."
   default     = "5439"
