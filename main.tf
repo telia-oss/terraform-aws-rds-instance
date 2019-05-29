@@ -32,6 +32,7 @@ resource "aws_db_instance" "main" {
   license_model             = "${var.license_model}"
   storage_encrypted         = "${var.storage_encrypted}"
   kms_key_id                = "${var.kms_key_id}"
+  deletion_protection       = "${var.deletion_protection}"
 
   apply_immediately = "${var.apply_immediately}"
 
