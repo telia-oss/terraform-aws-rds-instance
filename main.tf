@@ -39,7 +39,7 @@ resource "aws_db_instance" "main" {
   # NOTE: This is duplicated because subnet_group does not return the name.
   db_subnet_group_name = "${var.name_prefix}-subnet-group"
 
-  tags = merge(var.tags, {"Name" = "${var.name_prefix}-db"})
+  tags = merge(var.tags, { "Name" = "${var.name_prefix}-db" })
 }
 
 resource "aws_db_subnet_group" "main" {
@@ -47,7 +47,7 @@ resource "aws_db_subnet_group" "main" {
   description = "Terraformed subnet group."
   subnet_ids  = var.subnet_ids
 
-  tags = merge(var.tags, {"Name" = "${var.name_prefix}-subnet-group"})
+  tags = merge(var.tags, { "Name" = "${var.name_prefix}-subnet-group" })
 }
 
 resource "aws_security_group" "main" {
@@ -55,7 +55,7 @@ resource "aws_security_group" "main" {
   description = "Terraformed security group."
   vpc_id      = var.vpc_id
 
-  tags = merge(var.tags, {"Name" = "${var.name_prefix}-sg"})
+  tags = merge(var.tags, { "Name" = "${var.name_prefix}-sg" })
 }
 
 resource "aws_security_group_rule" "egress" {
