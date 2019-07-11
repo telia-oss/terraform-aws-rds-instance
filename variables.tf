@@ -4,8 +4,8 @@
 
 variable "apply_immediately" {
   description = "Specifies whether any database modifications are applied immediately, or during the next maintenance window"
-  type        = string
-  default     = "false"
+  type        = bool
+  default     = false
 }
 
 variable "name_prefix" {
@@ -82,8 +82,8 @@ variable "allocated_storage" {
 
 variable "publicly_accessible" {
   description = "Bool to control if instances is publicly accessible."
-  type        = string
-  default     = "false"
+  type        = bool
+  default     = false
 }
 
 variable "monitoring_interval" {
@@ -124,14 +124,14 @@ variable "backup_retention_period" {
 
 variable "skip_final_snapshot" {
   description = "Determines whether a final DB snapshot is created before the DB instance is deleted. If true is specified, no DB snapshot is created."
-  type        = string
-  default     = "true"
+  type        = bool
+  default     = true
 }
 
 variable "multi_az" {
   description = "Specifies if the RDS instance is multi-AZ."
-  type        = string
-  default     = "true"
+  type        = bool
+  default     = true
 }
 
 variable "tags" {
@@ -160,8 +160,8 @@ variable "monitoring_role_arn" {
 
 variable "storage_encrypted" {
   description = "Specifies whether the DB instance is encrypted."
-  type        = string
-  default     = "true"
+  type        = bool
+  default     = true
 }
 
 variable "kms_key_id" {
