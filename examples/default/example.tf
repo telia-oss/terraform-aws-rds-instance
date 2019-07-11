@@ -23,7 +23,7 @@ module "rds" {
   allocated_storage = "5"
   multi_az          = "false"
 
-  tags {
+  tags = {
     environment = "prod"
     terraform   = "True"
   }
