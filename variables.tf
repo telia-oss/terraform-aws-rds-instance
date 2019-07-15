@@ -156,7 +156,7 @@ variable "monitoring_role_arn" {
 variable "storage_encrypted" {
   description = "Specifies whether the DB instance is encrypted."
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "kms_key_id" {
