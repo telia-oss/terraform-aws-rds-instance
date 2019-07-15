@@ -11,31 +11,26 @@ variable "apply_immediately" {
 variable "name_prefix" {
   description = "A prefix used for naming resources."
   type        = string
-  default     = null
 }
 
 variable "vpc_id" {
   description = "The VPC ID."
   type        = string
-  default     = null
 }
 
 variable "subnet_ids" {
   description = "A list of VPC subnet IDs."
   type        = list(string)
-  default     = null
 }
 
 variable "username" {
   description = "Username for the master DB user."
   type        = string
-  default     = null
 }
 
 variable "password" {
   description = "Password for the master DB user."
   type        = string
-  default     = null
 }
 
 variable "database_name" {
@@ -161,7 +156,6 @@ variable "monitoring_role_arn" {
 variable "storage_encrypted" {
   description = "Specifies whether the DB instance is encrypted."
   type        = bool
-  default     = true
 }
 
 variable "kms_key_id" {
