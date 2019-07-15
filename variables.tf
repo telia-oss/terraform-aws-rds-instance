@@ -47,8 +47,8 @@ variable "deletion_protection" {
 
 variable "port" {
   description = "The port on which the DB accepts connections."
-  type        = string
-  default     = "5439"
+  type        = number
+  default     = 5439
 }
 
 variable "engine" {
@@ -71,8 +71,8 @@ variable "instance_type" {
 
 variable "allocated_storage" {
   description = "The allocated storage in gigabytes."
-  type        = string
-  default     = "50"
+  type        = number
+  default     = 50
 }
 
 variable "publicly_accessible" {
