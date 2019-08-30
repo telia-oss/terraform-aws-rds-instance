@@ -66,7 +66,7 @@ variable "engine_version" {
 variable "instance_type" {
   description = "The DB instance class to use."
   type        = string
-  default     = "db.m3.medium"
+  default     = "db.t3.medium"
 }
 
 variable "allocated_storage" {
