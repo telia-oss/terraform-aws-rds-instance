@@ -15,6 +15,8 @@ resource "aws_db_instance" "main" {
   port                      = var.port
   engine                    = var.engine
   engine_version            = var.engine_version
+  option_group_name         = var.option_group_name
+  parameter_group_name      = var.parameter_group_name
   instance_class            = var.instance_type
   storage_type              = "gp2"
   allocated_storage         = var.allocated_storage
