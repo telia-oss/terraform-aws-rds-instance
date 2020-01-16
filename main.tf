@@ -33,6 +33,7 @@ resource "aws_db_instance" "main" {
   storage_encrypted         = var.storage_encrypted
   kms_key_id                = var.kms_key_id
   deletion_protection       = var.deletion_protection
+  ca_cert_identifier        = var.ca_cert_identifier
 
   apply_immediately = var.apply_immediately
 

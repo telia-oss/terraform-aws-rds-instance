@@ -164,3 +164,9 @@ variable "kms_key_id" {
   type        = string
   default     = ""
 }
+
+variable "ca_cert_identifier" {
+  description = "Specifies the identifier of the CA certificate for the DB instance."
+  type        = string
+  default     = "rds-ca-2015"
+}
