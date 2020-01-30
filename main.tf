@@ -7,7 +7,7 @@ resource "random_string" "suffix" {
 }
 
 resource "aws_db_instance" "main" {
-  depends_on                = ["aws_db_subnet_group.main"]
+  depends_on                = [aws_db_subnet_group.main]
   identifier                = "${var.name_prefix}-db"
   name                      = var.database_name
   username                  = var.username
@@ -61,6 +61,7 @@ resource "aws_security_group" "main" {
 
 resource "aws_security_group_rule" "egress" {
   security_group_id = aws_security_group.main.id
+  description       = "Terraformed security group."
   type              = "egress"
   protocol          = "-1"
   from_port         = 0
