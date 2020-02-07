@@ -7,7 +7,7 @@ resource "random_string" "suffix" {
 }
 
 resource "aws_db_instance" "main" {
-  depends_on                = ["aws_db_subnet_group.main"]
+  depends_on                = [aws_db_subnet_group.main]
   identifier                = "${var.name_prefix}-db"
   name                      = var.database_name
   username                  = var.username
@@ -35,6 +35,7 @@ resource "aws_db_instance" "main" {
   storage_encrypted         = var.storage_encrypted
   kms_key_id                = var.kms_key_id
   deletion_protection       = var.deletion_protection
+  ca_cert_identifier        = var.ca_cert_identifier
 
   apply_immediately = var.apply_immediately
 
@@ -62,6 +63,7 @@ resource "aws_security_group" "main" {
 
 resource "aws_security_group_rule" "egress" {
   security_group_id = aws_security_group.main.id
+  description       = "Terraformed security group."
   type              = "egress"
   protocol          = "-1"
   from_port         = 0
