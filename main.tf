@@ -9,7 +9,7 @@ resource "random_string" "suffix" {
 resource "aws_db_instance" "main" {
   depends_on                = [aws_db_subnet_group.main]
   identifier                = "${var.name_prefix}-db"
-  name                      = var.database_name
+  db_name                   = var.database_name
   username                  = var.username
   password                  = var.password
   port                      = var.port
