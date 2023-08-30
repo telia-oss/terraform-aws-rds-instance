@@ -48,5 +48,5 @@ output "username" {
 
 output "database_name" {
   description = "The database name."
-  value       = aws_db_instance.main.name
+  value       = aws_db_instance.main.db_name
 }
